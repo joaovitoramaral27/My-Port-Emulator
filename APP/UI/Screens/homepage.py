@@ -1,3 +1,5 @@
+from email.mime import image
+
 from kivy.uix.screenmanager import Screen
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
@@ -42,23 +44,23 @@ class Homepage(Screen):
         )
 
         console_grid.add_widget(
-            EmulatorCard(system_name="GB")
+            EmulatorCard(image="Assets/GBicon.png", system_name="GB")
         )
 
         console_grid.add_widget(
-            EmulatorCard(system_name="GBC")
+            EmulatorCard(image=None, system_name="GBC")
         )
 
         console_grid.add_widget(
-            EmulatorCard(system_name="GBA")
+            EmulatorCard(image=None, system_name="GBA")
         )
 
         console_grid.add_widget(
-            EmulatorCard(system_name="NDS")
+            EmulatorCard(image=None, system_name="NDS")
         )
 
         console_grid.add_widget(
-            EmulatorCard(system_name="3DS")
+            EmulatorCard(image=None, system_name="3DS")
         )
 
         content.add_widget(console_grid)
