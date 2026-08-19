@@ -5,6 +5,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.anchorlayout import AnchorLayout
+from kivy.uix.image import Image
 
 from APP.UI.Components.emulator_card import EmulatorCard
 
@@ -23,15 +24,29 @@ class Homepage(Screen):
             height=60
         )
 
+        profile_area = BoxLayout(
+        orientation="horizontal",
+        size_hint_x=None,
+        width=180
+    )
+
+        profile_image = Image(
+        source="Assets/LowProfile.png",
+        size_hint_x=None,
+        width=40
+        )
+
         profile_label = Label(
-            text="👤 Profile ▼"
+        text="Profile"
         )
 
         title_label = Label(
             text="Omni"
         )
 
-        header.add_widget(profile_label)
+        profile_area.add_widget(profile_image)
+        profile_area.add_widget(profile_label)
+        header.add_widget(profile_area)
         header.add_widget(title_label)
 
         main_layout.add_widget(header)
@@ -67,11 +82,11 @@ class Homepage(Screen):
         )
 
         console_grid.add_widget(
-            EmulatorCard(image=None, system_name="NDS")
+        EmulatorCard(image="Assets/DSicon.png", system_name="DS")
         )
 
         console_grid.add_widget(
-            EmulatorCard(image=None, system_name="3DS")
+            EmulatorCard(image="Assets/3DSicon.png", system_name="3DS")
         )
 
         console_area.add_widget(console_grid)
