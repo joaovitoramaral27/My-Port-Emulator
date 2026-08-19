@@ -59,11 +59,11 @@ class Homepage(Screen):
         )
 
         console_grid.add_widget(
-            EmulatorCard(image=None, system_name="GBC")
+            EmulatorCard(image="Assets/GBCicon.png", system_name="GBC")
         )
 
         console_grid.add_widget(
-            EmulatorCard(image=None, system_name="GBA")
+            EmulatorCard(image="Assets/GBAicon.png", system_name="GBA")
         )
 
         console_grid.add_widget(
