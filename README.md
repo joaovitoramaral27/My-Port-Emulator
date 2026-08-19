@@ -1,6 +1,6 @@
-# My Port Emulator
+# Omni Multi-Emulator
 
-O My Port Emulator é um projeto de multi-emulador mobile desenvolvido em Python, criado com foco em dispositivos móveis.
+O Omni Multi-Emulator é um projeto de multi-emulador mobile desenvolvido em Python, criado com foco em dispositivos móveis.
 
 O projeto tem como objetivo inicialmente oferecer suporte aos consoles portáteis da Nintendo:
 
@@ -16,7 +16,7 @@ A arquitetura do projeto será desenvolvida pensando na expansão futura para ou
 
 ## Objetivo
 
-O My Port Emulator busca ser um emulador modular, organizado e preparado para crescer junto com novos sistemas.
+O Omni Multi-Emulator busca ser um emulador modular, organizado e preparado para crescer junto com novos sistemas.
 
 A ideia é separar a interface mobile do núcleo de emulação, permitindo que diferentes sistemas possam ser adicionados sem precisar reconstruir toda a aplicação.
 
