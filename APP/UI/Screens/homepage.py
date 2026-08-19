@@ -3,6 +3,8 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 
+from APP.UI.Components.emulator_card import EmulatorCard
+
 class Homepage(Screen):
 
     def __init__(self, **kwargs):
@@ -19,11 +21,11 @@ class Homepage(Screen):
         )
 
         profile_label = Label(
-            text="👤 João ▼"
+            text="👤 Profile ▼"
         )
 
         title_label = Label(
-            text="MY-PORT"
+            text="Omni"
         )
 
         header.add_widget(profile_label)
@@ -35,34 +37,28 @@ class Homepage(Screen):
             orientation="vertical"
         )
 
-        title = Label(
-            text="ESCOLHA SEU CONSOLE"
-        )
-
-        content.add_widget(title)
-
         console_grid = GridLayout(
             cols=3
         )
 
         console_grid.add_widget(
-            Label(text="GAME BOY")
+            EmulatorCard(system_name="GB")
         )
 
         console_grid.add_widget(
-            Label(text="GBC")
+            EmulatorCard(system_name="GBC")
         )
 
         console_grid.add_widget(
-            Label(text="GBA")
+            EmulatorCard(system_name="GBA")
         )
 
         console_grid.add_widget(
-            Label(text="NDS")
+            EmulatorCard(system_name="NDS")
         )
 
         console_grid.add_widget(
-            Label(text="3DS")
+            EmulatorCard(system_name="3DS")
         )
 
         content.add_widget(console_grid)
