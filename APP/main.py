@@ -3,7 +3,7 @@ from kivy.uix.screenmanager import ScreenManager
 from kivy.core.window import Window
 
 from APP.UI.Screens.homepage import Homepage
-#from APP.UI.Screens.gamelist import Gamelist
+from APP.UI.Screens.gamelist import GameList
 from APP.UI.theme import BACKGROUND
 
 Window.clearcolor = BACKGROUND
@@ -13,7 +13,7 @@ class MyPortApp(App):
     def build(self):
         screen_manager = ScreenManager()
         screen_manager.add_widget(Homepage(name="homepage"))
-        #screen_manager.add_widget(Gamelist(name="gamelist"))
+        screen_manager.add_widget(GameList(name="gamelist"))
 
         return screen_manager
 

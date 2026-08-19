@@ -68,23 +68,23 @@ class Homepage(Screen):
         )
 
         console_grid.add_widget(
-            EmulatorCard(image="Assets/GBicon.png", system_name="GB")
+            EmulatorCard(image="Assets/GBicon.png", system_name="GB", on_select=self.select_system)
         )
 
         console_grid.add_widget(
-            EmulatorCard(image="Assets/GBCicon.png", system_name="GBC")
+            EmulatorCard(image="Assets/GBCicon.png", system_name="GBC", on_select=self.select_system)
         )
 
         console_grid.add_widget(
-            EmulatorCard(image="Assets/GBAicon.png", system_name="GBA")
+            EmulatorCard(image="Assets/GBAicon.png", system_name="GBA", on_select=self.select_system)
         )
 
         console_grid.add_widget(
-        EmulatorCard(image="Assets/DSicon.png", system_name="DS")
+            EmulatorCard(image="Assets/DSicon.png", system_name="DS", on_select=self.select_system)
         )
 
         console_grid.add_widget(
-            EmulatorCard(image="Assets/3DSicon.png", system_name="3DS")
+            EmulatorCard(image="Assets/3DSicon.png", system_name="3DS", on_select=self.select_system)
         )
 
         console_area.add_widget(console_grid)
@@ -93,3 +93,10 @@ class Homepage(Screen):
         main_layout.add_widget(content)
 
         self.add_widget(main_layout)
+
+    def select_system(self, system_name):
+        game_list = self.manager.get_screen("gamelist")
+
+        game_list.set_system(system_name)
+
+        self.manager.current = "gamelist"

@@ -7,8 +7,11 @@ from kivy.graphics import Color, RoundedRectangle
 
 class EmulatorCard(ButtonBehavior, BoxLayout):
 
-    def __init__(self, system_name, image, **kwargs):
+    def __init__(self, system_name, image, on_select=None, **kwargs):
         super().__init__(**kwargs)
+
+        self.system_name = system_name
+        self.on_select = on_select
 
         self.orientation = "vertical"
 
@@ -50,3 +53,12 @@ class EmulatorCard(ButtonBehavior, BoxLayout):
     def update_background(self, *args):
         self.background.pos = self.pos
         self.background.size = self.size
+
+    def on_press(self):
+        print(f"{self.system_name} pressionado")
+
+    def on_release(self):
+        print(f"Selecionado: {self.system_name}")
+
+        if self.on_select:
+            self.on_select(self.system_name)
