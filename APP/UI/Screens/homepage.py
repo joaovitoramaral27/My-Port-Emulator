@@ -4,6 +4,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
+from kivy.uix.anchorlayout import AnchorLayout
 
 from APP.UI.Components.emulator_card import EmulatorCard
 
@@ -39,8 +40,18 @@ class Homepage(Screen):
             orientation="vertical"
         )
 
+        console_area = AnchorLayout(
+            anchor_x="center",
+            anchor_y="center"
+        )
+
         console_grid = GridLayout(
-            cols=3
+            cols=3,
+            spacing=20,
+            padding=20,
+            size_hint=(None, None),
+            width=620,
+            height=500
         )
 
         console_grid.add_widget(
@@ -63,7 +74,8 @@ class Homepage(Screen):
             EmulatorCard(image=None, system_name="3DS")
         )
 
-        content.add_widget(console_grid)
+        console_area.add_widget(console_grid)
+        content.add_widget(console_area)
 
         main_layout.add_widget(content)
 
