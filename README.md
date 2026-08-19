@@ -85,16 +85,18 @@ O projeto será desenvolvido inicialmente utilizando:
 38. [ ]B
 39. [ ]Start
 40. [ ]Select
+41. [ ]L
+42. [ ]R
 
 ## Fase 6 • Timers + Áudio
 
-41. [ ]Timers
-42. [ ]Áudio
+43. [ ]Timers
+44. [ ]Áudio
 
 ## Fase 7 • Game Loop
 
-43. [ ]Game Loop
-44. [ ]Sincronização
-45. [ ]Renderização
-46. [ ]Input
-47. [ ]Execução por frame
+45. [ ]Game Loop
+46. [ ]Sincronização
+47. [ ]Renderização
+48. [ ]Input
+49. [ ]Execução por frame

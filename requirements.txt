@@ -1,0 +1,5 @@
+#Rodar o código no terminal com o comando:
+python -m APP.main
+
+#Instalações necessárias:
+#pip install kivy
