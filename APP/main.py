@@ -8,7 +8,7 @@ from APP.UI.theme import BACKGROUND
 
 Window.clearcolor = BACKGROUND
 
-class MyPortApp(App):
+class OmniApp(App):
 
     def build(self):
         screen_manager = ScreenManager()
@@ -19,4 +19,4 @@ class MyPortApp(App):
 
 
 if __name__ == "__main__":
-    MyPortApp().run()
+    OmniApp().run()

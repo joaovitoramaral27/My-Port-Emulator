@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 
-
 SETTINGS_FILE = Path("APP/Settings/rom_folders.json")
 
 

@@ -230,8 +230,10 @@ class GameList(Screen):
 
     def open_folder_chooser(self, *args):
 
+        start_path = str(Path.home())
+
         chooser = FileChooserListView(
-            path=".",
+            path=start_path,
             dirselect=True
         )
 
